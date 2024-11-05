@@ -1,0 +1,78 @@
+{% extends "template.html" %}
+{% load static %}
+{% block title %}INICIO{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% endblock %}
+
+{% block contenido %}
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li class="active"><a href="{% url 'home' %}">Transformaciones</a></li>
+                <li><a href="{% url 'camara' %}">Camara</a></li>
+                <li><a href="{% url 'extras' %}">Otros</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+<!-- Main -->
+<div id="main">
+
+    <!-- Featured Post -->
+        <article class="post featured">
+            <header class="major">
+                <h2><a href="#">Transformaciones</a></h2>
+                <!--
+                <h2><a href="#">And this is a<br />
+                massive headline</a></h2>
+                -->
+            </header>
+            <img src="{% static 'images/deteccion-de-autos.webp' %}" alt="" />
+            <!--<a href="#" class="image main"><img src="{% static 'images/deteccion-de-autos.webp' %}" alt="" /></a>-->
+        </article>
+
+    <!-- Posts -->
+        <section class="posts">
+            <article>
+                <header>
+                    <h2><a href="#">Cambio de color</a></h2>
+                </header>
+                <a href="#" class="image fit"><img src="{% static 'images/color.png' %}" alt="" /></a>
+                <p>El cambio de color mediante ajuste de tono en una imagen consiste en modificar la tonalidad de cada píxel sin alterar otros atributos, como la saturación o la luminosidad.</p>
+
+            </article>
+            <article>
+                <header>
+                    <h2><a href="#">Pixelado</h2>
+                </header>
+                <a href="#" class="image fit"><img src="{% static 'images/pixelado.png' %}" alt="" /></a>
+                <p>El efecto de pixelado en una imagen se refiere a reducir su resolución de manera que los detalles finos se pierdan, y cada grupo de píxeles se convierta en un solo bloque de color uniforme.</p>
+
+            </article>
+            <article>
+                <header>
+                    <h2><a href="#">Interpolación de imagenes</h2>
+                </header>
+                <a href="#" class="image fit"><img src="{% static 'images/suma.png' %}" alt="" /></a>
+                <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+
+            </article>
+            <article>
+                <header>
+                    <h2><a href="#">Tempus sed<br />
+                    nulla imperdiet</a></h2>
+                </header>
+                <a href="#" class="image fit"><img src="{% static 'images/pic05.jpg' %}" alt="" /></a>
+                <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+
+            </article>
+        </section>
+</div>
+{% endblock %}

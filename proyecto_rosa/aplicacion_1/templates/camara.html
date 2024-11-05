@@ -1,0 +1,36 @@
+{% extends "template.html" %}
+{% load static %}
+{% block title %}INICIO{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% endblock %}
+
+{% block contenido %}
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="{% url 'home' %}">Transformaciones</a></li>
+                <li class="active"><a href="{% url 'camara' %}">Camara</a></li>
+                <li><a href="{% url 'extras' %}">Otros</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+<div id="main">
+
+    <!-- Post -->
+        <section class="post">
+            <header class="major">
+                <h1>Camara</h1>
+            </header>
+            <div class="image main"><img src="{% url 'video' %}" alt="Video en tiempo real" /></div>
+        </section>
+
+</div>
+{% endblock %}
