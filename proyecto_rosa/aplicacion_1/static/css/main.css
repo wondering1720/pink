@@ -29,6 +29,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+
+
+
 body {
 	line-height: 1;
 }
@@ -4686,4 +4689,8 @@ input, select, textarea {
 			visibility: visible;
 		}
 
+	}
+
+	.clase_propia {
+		display: flex;
 	}

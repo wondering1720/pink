@@ -30,7 +30,38 @@
                 <h1>Camara</h1>
             </header>
             <div class="image main"><img src="{% url 'video' %}" alt="Video en tiempo real" /></div>
+            <div class="clase_propia">
+                <ul id="boton1" class="actions special">
+                    <li><a id="boton-cara" class="button large" onclick="cambiarModo('cara')">Cara</a></li>
+                </ul>
+                <ul id="boton2" class="actions special">
+                    <li><a id="boton-ojos" class="button large" onclick="cambiarModo('ojos')">Ojos</a></li>
+                </ul>
+                <ul id="boton3" class="actions special">
+                    <li><a id="boton-body" class="button large" onclick="cambiarModo('full_body')">Full_body</a></li>
+                </ul>
+                <ul id="boton4" class="actions special">
+                    <li><a id="boton-nariz" class="button large" onclick="cambiarModo('boca')">Boca</a></li>
+                </ul>
+                <ul id="boton5" class="actions special">
+                    <li><a id="boton-color" class="button large" onclick="cambiarModo('color')">Color</a></li>
+                </ul>
+            </div>
         </section>
 
+        <script>
+            let modo = 'cara';
+
+            function cambiarModo(nuevoModo) {
+                fetch(`/cambiar_modo/?modo=${nuevoModo}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Modo cambiado a:', data.modo);
+                    })
+                .catch(error => {
+                    console.error('Error al cambiar el modo:', error);
+                });
+            }
+        </script>
 </div>
 {% endblock %}

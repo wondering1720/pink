@@ -25,4 +25,5 @@ urlpatterns = [
     path('camara/', views.camara, name='camara'),
     path('extras/', views.extras, name='extras'),
     path('video/', views.video, name='video'),
+    path('cambiar_modo/', views.cambiar_modo, name='cambiar_modo'),
 ]
